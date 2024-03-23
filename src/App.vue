@@ -29,6 +29,7 @@ background-color: aqua;
 padding: 20px;
 border: 3px solid rgb(2, 62, 62);
 border-radius: 10px;
+min-height: 200px;
 }
 .v-enter-active,
 .v-leave-active {
