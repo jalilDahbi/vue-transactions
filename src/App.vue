@@ -1,5 +1,7 @@
 <script setup>
+import { ref } from 'vue';
 
+const showContent = ref(false)
 </script>
 
 <template>
@@ -7,11 +9,34 @@
     <h1>transaction cource</h1>
   </header>
 
-  <main>
-    hire where i can start codding
+  <main class="main">
+    <button @click="showContent = !showContent">
+      {{ showContent ? "Hide" : "Show" }} Content
+    </button>
+    <transition>
+      <ul v-if="showContent">
+        <li>item1</li>
+        <li>item3</li>
+        <li>item3</li>
+      </ul>
+    </transition>
   </main>
 </template>
 
 <style scoped>
+.main {
+background-color: aqua;
+padding: 20px;
+border: 3px solid rgb(2, 62, 62);
+border-radius: 10px;
+}
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
 
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
 </style>
