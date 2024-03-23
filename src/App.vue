@@ -41,4 +41,8 @@ min-height: 200px;
   opacity: 0;
   transform: translateY(-10px);
 }
+.v-leave-to {
+  opacity: 0;
+  transform: translateY(10px);
+}
 </style>
